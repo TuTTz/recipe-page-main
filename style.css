@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    border-radius: 0.5rem;
+}
+
+:root {
+    /**### Primary */
+    --Nutmeg: hsl(14, 45%, 36%);
+    --Dark-Raspberry: hsl(332, 51%, 32%);
+    /** ### Neutral */
+    --White: hsl(0, 0%, 100%);
+    --Rose-White: hsl(330, 100%, 98%);
+    --Eggshell: hsl(30, 54%, 90%);
+    --Light-Grey: hsl(30, 18%, 87%);
+    --Wenge-Brown: hsl(30, 10%, 34%);
+    --Dark-Charcoal: hsl(24, 5%, 18%);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: var(--Eggshell);
+}
+
+
+
+main {
+    max-width: 700px;
+    background-color: var(--White);
+    padding: 2rem;
+    margin: 2.5rem;
+    border-radius: 1rem;
+    color: var(--Dark-Charcoal);
+}
+
+@media (max-width: 600px) {
+    main {
+        position: relative;
+        border-radius: 0px;
+        padding: 2rem;
+        margin: 0;
+        padding-top: 15rem;
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        border-radius: 0px;
+
+    }
+
+    .calories,
+    .carbs,
+    .protein,
+    .fat {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .calories span,
+    .carbs span,
+    .protein span,
+    .fat span {
+        padding-right: 0;
+
+    }
+}
+
+h1,
+h2 {
+    font-family: 'Young Serif', serif;
+    margin: 1.5rem 0;
+    letter-spacing: .28rem;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.preparation_time {
+    background-color: var(--Rose-White);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+h3 {
+    color: var(--Dark-Raspberry);
+    margin-bottom: 1rem;
+}
+
+.preparation_time ul,
+.ingredients ul,
+.instructions ol {
+    list-style-position: outside;
+    margin-left: 1rem;
+}
+
+.preparation_time li {
+    margin: 0.5rem 0;
+
+}
+
+.preparation_time li::marker {
+    color: var(--Dark-Raspberry);
+}
+
+.preparation_time strong,
+.instructions strong {
+    color: var(--Wenge-Brown);
+}
+
+h2 {
+    color: var(--Nutmeg);
+    letter-spacing: .10rem;
+}
+
+.ingredients li,
+.instructions li {
+    margin: 1rem 0;
+    padding-left: 1rem;
+}
+
+.ingredients li::marker,
+.instructions li::marker {
+    color: var(--Nutmeg);
+    font-weight: 700;
+}
+
+.ingredients,
+.instructions,
+.calories,
+.carbs,
+.protein {
+    border-bottom: 1px solid var(--Light-Grey);
+    padding-bottom: 1rem;
+}
+
+.instructions li {
+    line-height: 1.5rem;
+}
+
+.calories,
+.carbs,
+.protein,
+.fat {
+    margin-top: 1rem;
+    padding-left: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.calories span,
+.carbs span,
+.protein span,
+.fat span {
+    color: var(--Nutmeg);
+    font-weight: 700;
+    width: 50%;
+}
